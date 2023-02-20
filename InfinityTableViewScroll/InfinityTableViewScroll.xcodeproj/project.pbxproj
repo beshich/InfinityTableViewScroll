@@ -8,18 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		8E65EB2A299F47B100099A43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB29299F47B100099A43 /* AppDelegate.swift */; };
-		8E65EB2E299F47B100099A43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB2D299F47B100099A43 /* ViewController.swift */; };
 		8E65EB33299F47B300099A43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E65EB32299F47B300099A43 /* Assets.xcassets */; };
 		8E65EB36299F47B300099A43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E65EB34299F47B300099A43 /* LaunchScreen.storyboard */; };
+		8E65EB4429A3D5F700099A43 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB4329A3D5F600099A43 /* MainTabBarViewController.swift */; };
+		8E65EB4F29A3D6C600099A43 /* AskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB4E29A3D6C600099A43 /* AskViewController.swift */; };
+		8E65EB5129A3D6DC00099A43 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB5029A3D6DC00099A43 /* JobViewController.swift */; };
+		8E65EB5329A3D6EC00099A43 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB5229A3D6EC00099A43 /* ShowViewController.swift */; };
+		8E65EB5529A3D70900099A43 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB5429A3D70900099A43 /* TopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8E65EB26299F47B100099A43 /* InfinityTableViewScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfinityTableViewScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E65EB29299F47B100099A43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E65EB2D299F47B100099A43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E65EB32299F47B300099A43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E65EB35299F47B300099A43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E65EB37299F47B300099A43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E65EB4329A3D5F600099A43 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		8E65EB4E29A3D6C600099A43 /* AskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskViewController.swift; sourceTree = "<group>"; };
+		8E65EB5029A3D6DC00099A43 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
+		8E65EB5229A3D6EC00099A43 /* ShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
+		8E65EB5429A3D70900099A43 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +96,11 @@
 		8E65EB4029A3D4D600099A43 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				8E65EB4829A3D67C00099A43 /* Ask */,
+				8E65EB4C29A3D6A800099A43 /* Job */,
 				8E65EB4129A3D4DF00099A43 /* Main */,
+				8E65EB4A29A3D68F00099A43 /* Show */,
+				8E65EB4529A3D65D00099A43 /* Top */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -104,7 +116,71 @@
 		8E65EB4229A3D4E800099A43 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8E65EB2D299F47B100099A43 /* ViewController.swift */,
+				8E65EB4329A3D5F600099A43 /* MainTabBarViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8E65EB4529A3D65D00099A43 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB4729A3D67500099A43 /* ViewController */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		8E65EB4729A3D67500099A43 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB5429A3D70900099A43 /* TopViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8E65EB4829A3D67C00099A43 /* Ask */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB4929A3D68900099A43 /* ViewController */,
+			);
+			path = Ask;
+			sourceTree = "<group>";
+		};
+		8E65EB4929A3D68900099A43 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB4E29A3D6C600099A43 /* AskViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8E65EB4A29A3D68F00099A43 /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB4B29A3D69B00099A43 /* ViewController */,
+			);
+			path = Show;
+			sourceTree = "<group>";
+		};
+		8E65EB4B29A3D69B00099A43 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB5229A3D6EC00099A43 /* ShowViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8E65EB4C29A3D6A800099A43 /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB4D29A3D6AB00099A43 /* ViewController */,
+			);
+			path = Job;
+			sourceTree = "<group>";
+		};
+		8E65EB4D29A3D6AB00099A43 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB5029A3D6DC00099A43 /* JobViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -179,7 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E65EB2E299F47B100099A43 /* ViewController.swift in Sources */,
+				8E65EB5529A3D70900099A43 /* TopViewController.swift in Sources */,
+				8E65EB5329A3D6EC00099A43 /* ShowViewController.swift in Sources */,
+				8E65EB5129A3D6DC00099A43 /* JobViewController.swift in Sources */,
+				8E65EB4F29A3D6C600099A43 /* AskViewController.swift in Sources */,
+				8E65EB4429A3D5F700099A43 /* MainTabBarViewController.swift in Sources */,
 				8E65EB2A299F47B100099A43 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

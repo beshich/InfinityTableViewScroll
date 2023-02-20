@@ -1,13 +1,13 @@
 //
-//  ViewController.swift
+//  AskViewController.swift
 //  InfinityTableViewScroll
 //
-//  Created by Agatay Embeev on 17.02.2023.
+//  Created by Agatay Embeev on 20.02.2023.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class AskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,4 +15,3 @@ class ViewController: UIViewController {
         view.backgroundColor = .red
     }
 }
-
