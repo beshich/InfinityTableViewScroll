@@ -52,13 +52,61 @@
 		8E65EB28299F47B100099A43 /* InfinityTableViewScroll */ = {
 			isa = PBXGroup;
 			children = (
-				8E65EB29299F47B100099A43 /* AppDelegate.swift */,
-				8E65EB2D299F47B100099A43 /* ViewController.swift */,
-				8E65EB32299F47B300099A43 /* Assets.xcassets */,
-				8E65EB34299F47B300099A43 /* LaunchScreen.storyboard */,
-				8E65EB37299F47B300099A43 /* Info.plist */,
+				8E65EB3D29A3D46C00099A43 /* ApplicationLayer */,
+				8E65EB3E29A3D4B000099A43 /* CoreLayer */,
+				8E65EB4029A3D4D600099A43 /* Flows */,
 			);
 			path = InfinityTableViewScroll;
+			sourceTree = "<group>";
+		};
+		8E65EB3D29A3D46C00099A43 /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB29299F47B100099A43 /* AppDelegate.swift */,
+				8E65EB34299F47B300099A43 /* LaunchScreen.storyboard */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		8E65EB3E29A3D4B000099A43 /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB3F29A3D4C200099A43 /* Resources */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		8E65EB3F29A3D4C200099A43 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB32299F47B300099A43 /* Assets.xcassets */,
+				8E65EB37299F47B300099A43 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8E65EB4029A3D4D600099A43 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB4129A3D4DF00099A43 /* Main */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		8E65EB4129A3D4DF00099A43 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB4229A3D4E800099A43 /* ViewController */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8E65EB4229A3D4E800099A43 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB2D299F47B100099A43 /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +321,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U3YA646BAR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = InfinityTableViewScroll/Info.plist;
+				INFOPLIST_FILE = InfinityTableViewScroll/CoreLayer/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -301,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = U3YA646BAR;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = InfinityTableViewScroll/Info.plist;
+				INFOPLIST_FILE = InfinityTableViewScroll/CoreLayer/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
