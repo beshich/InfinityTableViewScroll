@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E427B6229A5289C00CA5BE1 /* TableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E427B6129A5289C00CA5BE1 /* TableViewProtocols.swift */; };
+		8E427B6C29A529D900CA5BE1 /* InlineProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E427B6B29A529D900CA5BE1 /* InlineProtocols.swift */; };
 		8E65EB2A299F47B100099A43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB29299F47B100099A43 /* AppDelegate.swift */; };
 		8E65EB33299F47B300099A43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E65EB32299F47B300099A43 /* Assets.xcassets */; };
 		8E65EB36299F47B300099A43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E65EB34299F47B300099A43 /* LaunchScreen.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		8E427B6129A5289C00CA5BE1 /* TableViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewProtocols.swift; sourceTree = "<group>"; };
+		8E427B6B29A529D900CA5BE1 /* InlineProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineProtocols.swift; sourceTree = "<group>"; };
 		8E65EB26299F47B100099A43 /* InfinityTableViewScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfinityTableViewScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E65EB29299F47B100099A43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E65EB32299F47B300099A43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,9 +48,26 @@
 		8E427B6029A5287A00CA5BE1 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				8E427B6129A5289C00CA5BE1 /* TableViewProtocols.swift */,
+				8E427B6A29A529CA00CA5BE1 /* Inline */,
+				8E427B6929A529C000CA5BE1 /* TableView */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8E427B6929A529C000CA5BE1 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				8E427B6129A5289C00CA5BE1 /* TableViewProtocols.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		8E427B6A29A529CA00CA5BE1 /* Inline */ = {
+			isa = PBXGroup;
+			children = (
+				8E427B6B29A529D900CA5BE1 /* InlineProtocols.swift */,
+			);
+			path = Inline;
 			sourceTree = "<group>";
 		};
 		8E65EB1D299F47B100099A43 = {
@@ -267,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E65EB5529A3D70900099A43 /* TopViewController.swift in Sources */,
+				8E427B6C29A529D900CA5BE1 /* InlineProtocols.swift in Sources */,
 				8E65EB5329A3D6EC00099A43 /* ShowViewController.swift in Sources */,
 				8E65EB5129A3D6DC00099A43 /* JobViewController.swift in Sources */,
 				8E65EB4F29A3D6C600099A43 /* AskViewController.swift in Sources */,
