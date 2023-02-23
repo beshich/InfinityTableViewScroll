@@ -32,8 +32,8 @@ final class MainTabBarViewController: UITabBarController {
                                     image: UIImage(systemName: "briefcase")),
         ]
         
-        view.backgroundColor = .systemBackground
-        tabBar.tintColor = .label
+        UITabBar.appearance().backgroundColor = .white
+        UITabBar.appearance().barTintColor = .clear
     }
     
     private func generateViewControllers(_ viewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
