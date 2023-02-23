@@ -10,6 +10,7 @@
 		8E427B6229A5289C00CA5BE1 /* TableViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E427B6129A5289C00CA5BE1 /* TableViewProtocols.swift */; };
 		8E427B6C29A529D900CA5BE1 /* InlineProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E427B6B29A529D900CA5BE1 /* InlineProtocols.swift */; };
 		8E427B6F29A52A5100CA5BE1 /* NSObject + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E427B6E29A52A5100CA5BE1 /* NSObject + Extensions.swift */; };
+		8E427B8429A68A7C00CA5BE1 /* Callbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E427B8329A68A7C00CA5BE1 /* Callbacks.swift */; };
 		8E65EB2A299F47B100099A43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB29299F47B100099A43 /* AppDelegate.swift */; };
 		8E65EB33299F47B300099A43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E65EB32299F47B300099A43 /* Assets.xcassets */; };
 		8E65EB36299F47B300099A43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E65EB34299F47B300099A43 /* LaunchScreen.storyboard */; };
@@ -24,6 +25,7 @@
 		8E427B6129A5289C00CA5BE1 /* TableViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewProtocols.swift; sourceTree = "<group>"; };
 		8E427B6B29A529D900CA5BE1 /* InlineProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineProtocols.swift; sourceTree = "<group>"; };
 		8E427B6E29A52A5100CA5BE1 /* NSObject + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + Extensions.swift"; sourceTree = "<group>"; };
+		8E427B8329A68A7C00CA5BE1 /* Callbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callbacks.swift; sourceTree = "<group>"; };
 		8E65EB26299F47B100099A43 /* InfinityTableViewScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfinityTableViewScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E65EB29299F47B100099A43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E65EB32299F47B300099A43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +82,30 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		8E427B8229A68A4C00CA5BE1 /* Callbacks */ = {
+			isa = PBXGroup;
+			children = (
+				8E427B8329A68A7C00CA5BE1 /* Callbacks.swift */,
+			);
+			path = Callbacks;
+			sourceTree = "<group>";
+		};
+		8E427B8529A68AB100CA5BE1 /* Utilis */ = {
+			isa = PBXGroup;
+			children = (
+				8E427B8629A68AB900CA5BE1 /* TabBarController */,
+			);
+			path = Utilis;
+			sourceTree = "<group>";
+		};
+		8E427B8629A68AB900CA5BE1 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				8E65EB4329A3D5F600099A43 /* MainTabBarViewController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
 		8E65EB1D299F47B100099A43 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +144,8 @@
 		8E65EB3E29A3D4B000099A43 /* CoreLayer */ = {
 			isa = PBXGroup;
 			children = (
+				8E427B8529A68AB100CA5BE1 /* Utilis */,
+				8E427B8229A68A4C00CA5BE1 /* Callbacks */,
 				8E427B6D29A52A3A00CA5BE1 /* Extensions */,
 				8E427B6029A5287A00CA5BE1 /* Protocols */,
 				8E65EB3F29A3D4C200099A43 /* Resources */,
@@ -139,27 +167,10 @@
 			children = (
 				8E65EB4829A3D67C00099A43 /* Ask */,
 				8E65EB4C29A3D6A800099A43 /* Job */,
-				8E65EB4129A3D4DF00099A43 /* Main */,
 				8E65EB4A29A3D68F00099A43 /* Show */,
 				8E65EB4529A3D65D00099A43 /* Top */,
 			);
 			path = Flows;
-			sourceTree = "<group>";
-		};
-		8E65EB4129A3D4DF00099A43 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				8E65EB4229A3D4E800099A43 /* ViewController */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		8E65EB4229A3D4E800099A43 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				8E65EB4329A3D5F600099A43 /* MainTabBarViewController.swift */,
-			);
-			path = ViewController;
 			sourceTree = "<group>";
 		};
 		8E65EB4529A3D65D00099A43 /* Top */ = {
@@ -302,6 +313,7 @@
 				8E427B6F29A52A5100CA5BE1 /* NSObject + Extensions.swift in Sources */,
 				8E65EB5129A3D6DC00099A43 /* JobViewController.swift in Sources */,
 				8E65EB4F29A3D6C600099A43 /* AskViewController.swift in Sources */,
+				8E427B8429A68A7C00CA5BE1 /* Callbacks.swift in Sources */,
 				8E65EB4429A3D5F700099A43 /* MainTabBarViewController.swift in Sources */,
 				8E427B6229A5289C00CA5BE1 /* TableViewProtocols.swift in Sources */,
 				8E65EB2A299F47B100099A43 /* AppDelegate.swift in Sources */,
