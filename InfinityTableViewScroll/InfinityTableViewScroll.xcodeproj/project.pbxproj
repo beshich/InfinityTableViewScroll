@@ -21,6 +21,7 @@
 		8E65EB5329A3D6EC00099A43 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB5229A3D6EC00099A43 /* ShowViewController.swift */; };
 		8E65EB5529A3D70900099A43 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB5429A3D70900099A43 /* TopViewController.swift */; };
 		8E8DA9CF29ADE3A2002D549C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9CE29ADE3A2002D549C /* TableViewController.swift */; };
+		8E8DA9D229ADE3F6002D549C /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E8DA9D129ADE3F6002D549C /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E8DA9D229ADE3F6002D549C /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +277,9 @@
 			dependencies = (
 			);
 			name = InfinityTableViewScroll;
+			packageProductDependencies = (
+				8E8DA9D129ADE3F6002D549C /* SnapKit */,
+			);
 			productName = InfinityTableViewScroll;
 			productReference = 8E65EB26299F47B100099A43 /* InfinityTableViewScroll.app */;
 			productType = "com.apple.product-type.application";
@@ -303,6 +308,9 @@
 				Base,
 			);
 			mainGroup = 8E65EB1D299F47B100099A43;
+			packageReferences = (
+				8E8DA9D029ADE3F6002D549C /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8E65EB27299F47B100099A43 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -550,6 +558,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8E8DA9D029ADE3F6002D549C /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8E8DA9D129ADE3F6002D549C /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8E8DA9D029ADE3F6002D549C /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8E65EB1E299F47B100099A43 /* Project object */;
 }
