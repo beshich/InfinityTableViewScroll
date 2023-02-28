@@ -20,6 +20,7 @@
 		8E65EB5129A3D6DC00099A43 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB5029A3D6DC00099A43 /* JobViewController.swift */; };
 		8E65EB5329A3D6EC00099A43 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB5229A3D6EC00099A43 /* ShowViewController.swift */; };
 		8E65EB5529A3D70900099A43 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB5429A3D70900099A43 /* TopViewController.swift */; };
+		8E8DA9CF29ADE3A2002D549C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9CE29ADE3A2002D549C /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		8E65EB5029A3D6DC00099A43 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
 		8E65EB5229A3D6EC00099A43 /* ShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 		8E65EB5429A3D70900099A43 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		8E8DA9CE29ADE3A2002D549C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		8E427B8529A68AB100CA5BE1 /* Utilis */ = {
 			isa = PBXGroup;
 			children = (
+				8E8DA9CD29ADE38B002D549C /* TableViewController */,
 				8E427B8629A68AB900CA5BE1 /* TabBarController */,
 			);
 			path = Utilis;
@@ -248,6 +251,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		8E8DA9CD29ADE38B002D549C /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8E8DA9CE29ADE3A2002D549C /* TableViewController.swift */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -325,6 +336,7 @@
 				8E427B6F29A52A5100CA5BE1 /* NSObject + Extensions.swift in Sources */,
 				8E65EB5129A3D6DC00099A43 /* JobViewController.swift in Sources */,
 				8E65EB4F29A3D6C600099A43 /* AskViewController.swift in Sources */,
+				8E8DA9CF29ADE3A2002D549C /* TableViewController.swift in Sources */,
 				8E427B8429A68A7C00CA5BE1 /* Callbacks.swift in Sources */,
 				8E65EB4429A3D5F700099A43 /* MainTabBarViewController.swift in Sources */,
 				8E427B6229A5289C00CA5BE1 /* TableViewProtocols.swift in Sources */,
