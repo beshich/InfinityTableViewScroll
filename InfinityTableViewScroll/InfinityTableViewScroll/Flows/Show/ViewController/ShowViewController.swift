@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ShowViewController: UIViewController {
+class ShowViewController: TableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .green
+        tableView.backgroundColor = .green
     }
 }

@@ -7,11 +7,11 @@
 
 import UIKit
 
-class AskViewController: UIViewController {
+class AskViewController: TableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .red
+        tableView.backgroundColor = .red
     }
 }

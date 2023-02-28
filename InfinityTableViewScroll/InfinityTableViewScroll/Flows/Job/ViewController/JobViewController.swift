@@ -7,11 +7,11 @@
 
 import UIKit
 
-class JobViewController: UIViewController {
+class JobViewController: TableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .blue
+        tableView.backgroundColor = .blue
     }
 }
