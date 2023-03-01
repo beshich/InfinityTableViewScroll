@@ -7,7 +7,7 @@
 
 import UIKit
 
-class JobViewController: TableViewController {
+final class JobViewController: TableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
