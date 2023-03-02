@@ -8,13 +8,26 @@
 import UIKit
 
 final class MainTabBarViewController: UITabBarController {
-
+    
+    // MARK: - Lifecycle:
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         generateTabBar()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupNavigation()
+    }
+    
     // MARK: - Methods:
+    
+    private func setupNavigation() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = "Infinity scroll"
+        navigationController?.navigationBar.sizeToFit()
+    }
     
     private func generateTabBar() {
         viewControllers = [
