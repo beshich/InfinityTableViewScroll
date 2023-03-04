@@ -15,6 +15,7 @@ class TableViewController: UIViewController {
     lazy var tableView = UITableView().apply {
         $0.delegate = self
         $0.dataSource = self
+        $0.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     // MARK: - Lifecycle:
@@ -56,5 +57,9 @@ extension TableViewController: TableViewDelegateAndDataSourcesProtocol {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        return
     }
 }

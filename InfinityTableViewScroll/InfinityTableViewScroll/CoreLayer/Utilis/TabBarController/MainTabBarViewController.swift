@@ -31,7 +31,7 @@ final class MainTabBarViewController: UITabBarController {
     
     private func generateTabBar() {
         viewControllers = [
-            generateViewControllers(TopViewController(),
+            generateViewControllers(TopViewController(viewModel: TopViewModel()),
                                     title: "Top",
                                     image: UIImage(systemName: "house")),
             generateViewControllers(AskViewController(),
