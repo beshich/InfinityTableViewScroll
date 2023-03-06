@@ -96,4 +96,15 @@ extension TopViewController {
             updateDisplayData()
         }
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let url = viewModel.displayStories[indexPath.row].url else { return }
+        
+        let viewModel = DetailsViewModel(url: url)
+        let viewController = DetailsViewController(viewModel: viewModel)
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
