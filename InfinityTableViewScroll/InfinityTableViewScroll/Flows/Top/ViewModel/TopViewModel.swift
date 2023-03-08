@@ -12,7 +12,7 @@ final class TopViewModel {
     // MARK: - Properties:
     
     var topStories: [Int] = []
-    var displayStories: [TopStoryModel] = []
+    var displayStories: [StoryModel] = []
     
     let limit = 20
     var lastItemIndex = -1
@@ -38,14 +38,14 @@ final class TopViewModel {
         task.resume()
     }
     
-    func getStoryById(id: Int, completion: @escaping Callback<TopStoryModel>) {
+    func getStoryById(id: Int, completion: @escaping Callback<StoryModel>) {
         guard let url = URL(string: "\(Constants.baseUrl)/item/\(id).json") else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data, error == nil else { return }
             
             do {
-                let results = try JSONDecoder().decode(TopStoryModel.self, from: data)
+                let results = try JSONDecoder().decode(StoryModel.self, from: data)
                 
                 completion(results)
             } catch {
