@@ -40,7 +40,7 @@ final class MainTabBarViewController: UITabBarController {
             generateViewControllers(JobViewController(),
                                     title: "Job",
                                     image: UIImage(systemName: "doc")),
-            generateViewControllers(ShowViewController(),
+            generateViewControllers(ShowViewController(viewModel: ShowViewModel()),
                                     title: "Show",
                                     image: UIImage(systemName: "briefcase")),
         ]
