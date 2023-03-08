@@ -34,7 +34,7 @@ final class MainTabBarViewController: UITabBarController {
             generateViewControllers(TopViewController(viewModel: TopViewModel()),
                                     title: "Top",
                                     image: UIImage(systemName: "house")),
-            generateViewControllers(AskViewController(),
+            generateViewControllers(AskViewController(viewModel: AskViewModel()),
                                     title: "Ask",
                                     image: UIImage(systemName: "questionmark")),
             generateViewControllers(JobViewController(viewModel: JobViewModel()),
