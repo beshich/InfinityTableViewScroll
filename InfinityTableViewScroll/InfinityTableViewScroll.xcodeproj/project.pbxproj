@@ -29,6 +29,7 @@
 		8E8DA9E429B5D02A002D549C /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9E329B5D02A002D549C /* DetailsViewModel.swift */; };
 		8E8DA9EA29B8E8BF002D549C /* ShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9E929B8E8BF002D549C /* ShowViewModel.swift */; };
 		8E8DA9ED29B8EA68002D549C /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9EC29B8EA68002D549C /* JobViewModel.swift */; };
+		8E8DA9F029B8EB60002D549C /* AskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9EF29B8EB60002D549C /* AskViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		8E8DA9E329B5D02A002D549C /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		8E8DA9E929B8E8BF002D549C /* ShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewModel.swift; sourceTree = "<group>"; };
 		8E8DA9EC29B8EA68002D549C /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
+		8E8DA9EF29B8EB60002D549C /* AskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 		8E65EB4829A3D67C00099A43 /* Ask */ = {
 			isa = PBXGroup;
 			children = (
+				8E8DA9EE29B8EB53002D549C /* ViewModel */,
 				8E65EB4929A3D68900099A43 /* ViewController */,
 			);
 			path = Ask;
@@ -346,6 +349,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		8E8DA9EE29B8EB53002D549C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8E8DA9EF29B8EB60002D549C /* AskViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -426,6 +437,7 @@
 				8E427B6C29A529D900CA5BE1 /* InlineProtocols.swift in Sources */,
 				8E65EB5329A3D6EC00099A43 /* ShowViewController.swift in Sources */,
 				8E427B6F29A52A5100CA5BE1 /* NSObject + Extensions.swift in Sources */,
+				8E8DA9F029B8EB60002D549C /* AskViewModel.swift in Sources */,
 				8E8DA9DB29B3678C002D549C /* Constants.swift in Sources */,
 				8E8DA9ED29B8EA68002D549C /* JobViewModel.swift in Sources */,
 				8E65EB5129A3D6DC00099A43 /* JobViewController.swift in Sources */,
