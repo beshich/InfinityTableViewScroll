@@ -251,8 +251,8 @@
 		8E65EB4C29A3D6A800099A43 /* Job */ = {
 			isa = PBXGroup;
 			children = (
-				8E8DA9EB29B8EA59002D549C /* ViewModel */,
 				8E65EB4D29A3D6AB00099A43 /* ViewController */,
+				8E8DA9EB29B8EA59002D549C /* ViewModel */,
 			);
 			path = Job;
 			sourceTree = "<group>";
