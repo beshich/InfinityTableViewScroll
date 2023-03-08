@@ -27,6 +27,7 @@
 		8E8DA9DE29B36890002D549C /* TopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9DD29B36890002D549C /* TopViewModel.swift */; };
 		8E8DA9E229B5CFA3002D549C /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9E129B5CFA3002D549C /* DetailsViewController.swift */; };
 		8E8DA9E429B5D02A002D549C /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9E329B5D02A002D549C /* DetailsViewModel.swift */; };
+		8E8DA9EA29B8E8BF002D549C /* ShowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9E929B8E8BF002D549C /* ShowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		8E8DA9DD29B36890002D549C /* TopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewModel.swift; sourceTree = "<group>"; };
 		8E8DA9E129B5CFA3002D549C /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		8E8DA9E329B5D02A002D549C /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		8E8DA9E929B8E8BF002D549C /* ShowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				8E65EB4B29A3D69B00099A43 /* ViewController */,
+				8E8DA9E829B8E89B002D549C /* ViewModel */,
 			);
 			path = Show;
 			sourceTree = "<group>";
@@ -324,6 +327,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		8E8DA9E829B8E89B002D549C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8E8DA9E929B8E8BF002D549C /* ShowViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -409,6 +420,7 @@
 				8E65EB4F29A3D6C600099A43 /* AskViewController.swift in Sources */,
 				8E8DA9D829B36775002D549C /* ApiClient.swift in Sources */,
 				8E8DA9E229B5CFA3002D549C /* DetailsViewController.swift in Sources */,
+				8E8DA9EA29B8E8BF002D549C /* ShowViewModel.swift in Sources */,
 				8E8DA9CF29ADE3A2002D549C /* TableViewController.swift in Sources */,
 				8E427B8429A68A7C00CA5BE1 /* Callbacks.swift in Sources */,
 				8E65EB4429A3D5F700099A43 /* MainTabBarViewController.swift in Sources */,
