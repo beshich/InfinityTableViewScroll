@@ -9,6 +9,10 @@ import Foundation
 
 final class JobViewModel {
     
+    // MARK: - Private Properties:
+    
+    private let stories = Stories.job.serviceName
+    
     // MARK: - Properties:
     
     var topStories: [Int] = []
@@ -22,7 +26,7 @@ final class JobViewModel {
     // MARK: - Methods
     
     func getTopStories(completion: @escaping Callback<[Int]>) {
-        guard let url = URL(string: "\(Constants.baseUrl)/jobstories.json") else { return }
+        guard let url = URL(string: "\(Constants.baseUrl)\(stories)") else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data, error == nil else { return }

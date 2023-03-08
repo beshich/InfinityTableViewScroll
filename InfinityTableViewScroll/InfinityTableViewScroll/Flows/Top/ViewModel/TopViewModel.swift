@@ -9,6 +9,10 @@ import Foundation
 
 final class TopViewModel {
     
+    // MARK: - Private Properties:
+    
+    private let stories = Stories.top.serviceName
+    
     // MARK: - Properties:
     
     var topStories: [Int] = []
@@ -22,7 +26,7 @@ final class TopViewModel {
     // MARK: - Methods
     
     func getTopStories(completion: @escaping Callback<[Int]>) {
-        guard let url = URL(string: "\(Constants.baseUrl)/topstories.json") else { return }
+        guard let url = URL(string: "\(Constants.baseUrl)\(stories)") else { return }
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data, error == nil else { return }
