@@ -30,6 +30,7 @@
 		8E8DA9ED29B8EA68002D549C /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9EC29B8EA68002D549C /* JobViewModel.swift */; };
 		8E8DA9F029B8EB60002D549C /* AskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9EF29B8EB60002D549C /* AskViewModel.swift */; };
 		8E8DA9F329B8ED2B002D549C /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9F229B8ED2B002D549C /* StoryModel.swift */; };
+		8E8DA9F529B8EE06002D549C /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9F429B8EE06002D549C /* Stories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		8E8DA9EC29B8EA68002D549C /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
 		8E8DA9EF29B8EB60002D549C /* AskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskViewModel.swift; sourceTree = "<group>"; };
 		8E8DA9F229B8ED2B002D549C /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
+		8E8DA9F429B8EE06002D549C /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				8E8DA9F229B8ED2B002D549C /* StoryModel.swift */,
+				8E8DA9F429B8EE06002D549C /* Stories.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				8E427B6F29A52A5100CA5BE1 /* NSObject + Extensions.swift in Sources */,
 				8E8DA9F029B8EB60002D549C /* AskViewModel.swift in Sources */,
 				8E8DA9DB29B3678C002D549C /* Constants.swift in Sources */,
+				8E8DA9F529B8EE06002D549C /* Stories.swift in Sources */,
 				8E8DA9ED29B8EA68002D549C /* JobViewModel.swift in Sources */,
 				8E65EB5129A3D6DC00099A43 /* JobViewController.swift in Sources */,
 				8E65EB4F29A3D6C600099A43 /* AskViewController.swift in Sources */,
