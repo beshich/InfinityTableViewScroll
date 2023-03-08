@@ -11,7 +11,6 @@
 		8E427B6C29A529D900CA5BE1 /* InlineProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E427B6B29A529D900CA5BE1 /* InlineProtocols.swift */; };
 		8E427B6F29A52A5100CA5BE1 /* NSObject + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E427B6E29A52A5100CA5BE1 /* NSObject + Extensions.swift */; };
 		8E427B8429A68A7C00CA5BE1 /* Callbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E427B8329A68A7C00CA5BE1 /* Callbacks.swift */; };
-		8E427B8C29A750BD00CA5BE1 /* UITableView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E427B8B29A750BD00CA5BE1 /* UITableView + Extensions.swift */; };
 		8E65EB2A299F47B100099A43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E65EB29299F47B100099A43 /* AppDelegate.swift */; };
 		8E65EB33299F47B300099A43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E65EB32299F47B300099A43 /* Assets.xcassets */; };
 		8E65EB36299F47B300099A43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E65EB34299F47B300099A43 /* LaunchScreen.storyboard */; };
@@ -35,7 +34,6 @@
 		8E427B6B29A529D900CA5BE1 /* InlineProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineProtocols.swift; sourceTree = "<group>"; };
 		8E427B6E29A52A5100CA5BE1 /* NSObject + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject + Extensions.swift"; sourceTree = "<group>"; };
 		8E427B8329A68A7C00CA5BE1 /* Callbacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callbacks.swift; sourceTree = "<group>"; };
-		8E427B8B29A750BD00CA5BE1 /* UITableView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Extensions.swift"; sourceTree = "<group>"; };
 		8E65EB26299F47B100099A43 /* InfinityTableViewScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfinityTableViewScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E65EB29299F47B100099A43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E65EB32299F47B300099A43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 		8E427B6D29A52A3A00CA5BE1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				8E427B8929A7509E00CA5BE1 /* TableView */,
 				8E427B6E29A52A5100CA5BE1 /* NSObject + Extensions.swift */,
 			);
 			path = Extensions;
@@ -126,14 +123,6 @@
 				8E65EB4329A3D5F600099A43 /* MainTabBarViewController.swift */,
 			);
 			path = TabBarController;
-			sourceTree = "<group>";
-		};
-		8E427B8929A7509E00CA5BE1 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				8E427B8B29A750BD00CA5BE1 /* UITableView + Extensions.swift */,
-			);
-			path = TableView;
 			sourceTree = "<group>";
 		};
 		8E65EB1D299F47B100099A43 = {
@@ -414,7 +403,6 @@
 				8E65EB5529A3D70900099A43 /* TopViewController.swift in Sources */,
 				8E427B6C29A529D900CA5BE1 /* InlineProtocols.swift in Sources */,
 				8E65EB5329A3D6EC00099A43 /* ShowViewController.swift in Sources */,
-				8E427B8C29A750BD00CA5BE1 /* UITableView + Extensions.swift in Sources */,
 				8E427B6F29A52A5100CA5BE1 /* NSObject + Extensions.swift in Sources */,
 				8E8DA9DB29B3678C002D549C /* Constants.swift in Sources */,
 				8E65EB5129A3D6DC00099A43 /* JobViewController.swift in Sources */,
