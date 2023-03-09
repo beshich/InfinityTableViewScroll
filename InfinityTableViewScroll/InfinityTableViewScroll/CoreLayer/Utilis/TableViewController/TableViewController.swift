@@ -12,14 +12,21 @@ class TableViewController: UIViewController {
     
     // MARK: - Properties:
     
+    var reusableText: String? {
+        didSet {
+            reusableCell.textLabel?.text = reusableText
+        }
+    }
+    
     var reusableCell = UITableViewCell()
+    var cellIdentifier = "reusableCell"
     
     // MARK: UI Elements:
     
     lazy var tableView = UITableView().apply {
         $0.delegate = self
         $0.dataSource = self
-        $0.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        $0.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
     }
     
     // MARK: - Lifecycle:
@@ -56,7 +63,7 @@ extension TableViewController: TableViewDelegateAndDataSourcesProtocol {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        reusableCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        reusableCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
         reusableCell.textLabel?.numberOfLines = 0
         reusableCell.textLabel?.lineBreakMode = .byWordWrapping
         
