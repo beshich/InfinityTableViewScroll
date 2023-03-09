@@ -10,6 +10,10 @@ import SnapKit
 
 class TableViewController: UIViewController {
     
+    // MARK: - Properties:
+    
+    var reusableCell = UITableViewCell()
+    
     // MARK: UI Elements:
     
     lazy var tableView = UITableView().apply {
@@ -52,7 +56,11 @@ extension TableViewController: TableViewDelegateAndDataSourcesProtocol {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        reusableCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        reusableCell.textLabel?.numberOfLines = 0
+        reusableCell.textLabel?.lineBreakMode = .byWordWrapping
+        
+        return reusableCell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

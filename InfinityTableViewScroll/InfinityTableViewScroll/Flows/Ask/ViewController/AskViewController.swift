@@ -83,12 +83,10 @@ extension AskViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.lineBreakMode = .byWordWrapping
-        cell.textLabel?.text = viewModel.displayStories[indexPath.row].title
+        reusableCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        reusableCell.textLabel?.text = viewModel.displayStories[indexPath.row].title
         
-        return cell
+        return reusableCell
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
