@@ -44,9 +44,7 @@ final class MainTabBarViewController: UITabBarController {
                                     title: "Show",
                                     image: UIImage(systemName: "briefcase")),
         ]
-        
-        UITabBar.appearance().backgroundColor = .white
-        UITabBar.appearance().barTintColor = .clear
+        tabBar.scrollEdgeAppearance = tabBar.standardAppearance
     }
     
     private func generateViewControllers(_ viewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
