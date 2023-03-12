@@ -1,12 +1,20 @@
-## Бесконечная прокрутка скролла 
+# Бесконечная прокрутка скролла 
 
-Бесконечный скролл (только на первой странице, т.к в самом [API](https://hacker-news.firebaseio.com/v0) есть конец), с переходами на `WebView`.
+## Description:
+
+> Бесконечный скролл (только на первой странице, т.к в самом [API](https://hacker-news.firebaseio.com/v0) есть конец), с переходами на `WebView`.
 
 Реализован в архитектуре `MVVM` с `Callback`'ами
 
 Использованные библиотети: `SnapKit`
 
 Использованное `API` - [Hacker News](https://hacker-news.firebaseio.com/v0)
+
+## Usage:
+
+Clone > Build - слишком лёгко
+
+## Demonstration:
 
 Ниже маленькая демонстрация:
 
