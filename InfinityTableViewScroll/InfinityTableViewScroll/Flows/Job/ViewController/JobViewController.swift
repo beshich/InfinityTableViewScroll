@@ -17,60 +17,36 @@ final class JobViewController: TableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchTopStories()
+        viewModel.viewDidLoad()
+        setupBindings()
     }
     
     init(viewModel: JobViewModel) {
         self.viewModel = viewModel
-        
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    // MARK: - Methods
+}
 
-    private func fetchTopStories() {
-        viewModel.getTopStories { [weak self] response in
-            guard let self else { return }
-            
-            self.viewModel.topStories = response
-            
-            self.updateDisplayData()
-        }
+// MARK: - Methods
+
+private extension JobViewController {
+    
+    func updateDisplayData() {
+        viewModel.updateDisplayData()
     }
     
-    private func updateDisplayData() {
-        let firstIndex = viewModel.lastItemIndex + 1
-        
-        if firstIndex > viewModel.topStories.count - 1 {
-            viewModel.isAllDataDisplayed = true
-            
-            return
-        }
-        
-        let maxIndex = (viewModel.lastItemIndex + viewModel.limit) <= (viewModel.topStories.count - 1) ? (viewModel.lastItemIndex + viewModel.limit) : (viewModel.topStories.count - 1)
-        
-        viewModel.isUpdating = true
-        
-        for index in firstIndex...maxIndex {
-            viewModel.getStoryById(id: viewModel.topStories[index]) { [weak self] stories in
-                guard let self else { return }
-                
-                self.viewModel.displayStories.append(stories)
-                
+    func setupBindings() {
+        viewModel.didUpdateSection = { [weak self] isUpdate in
+            if isUpdate {
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                    
-                    if self.viewModel.displayStories.count == maxIndex + 1 {
-                        self.viewModel.isUpdating = true
-                    }
+                    self?.tableView.reloadData()
                 }
             }
         }
-        viewModel.lastItemIndex = maxIndex
     }
 }
 
