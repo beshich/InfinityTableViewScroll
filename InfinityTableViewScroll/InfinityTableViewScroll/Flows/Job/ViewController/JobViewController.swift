@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class JobViewController: TableViewController {
+final class JobViewController: MainListViewController {
     
     // MARK: - Properties:
     

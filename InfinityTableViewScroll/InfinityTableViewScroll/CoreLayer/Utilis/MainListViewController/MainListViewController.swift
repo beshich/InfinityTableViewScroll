@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class TableViewController: UIViewController {
+class MainListViewController: UIViewController {
     
     // MARK: - Properties:
     
@@ -17,6 +17,8 @@ class TableViewController: UIViewController {
             reusableCell.textLabel?.text = reusableText
         }
     }
+    
+    var mainListViewModel: MainListViewModel
     
     var reusableCell = UITableViewCell()
     var cellIdentifier = "reusableCell"
@@ -30,7 +32,16 @@ class TableViewController: UIViewController {
     }
     
     // MARK: - Lifecycle:
-
+    
+    init(mainListViewModel: MainListViewModel) {
+        self.mainListViewModel = mainListViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -39,7 +50,7 @@ class TableViewController: UIViewController {
 
 // MARK: - Setup Views:
 
-extension TableViewController {
+extension MainListViewController {
     
     private func setupViews() {
         view.addSubview(tableView)
@@ -56,7 +67,7 @@ extension TableViewController {
 
 // MARK: TableViewDelegate/DataSoruce:
 
-extension TableViewController: TableViewDelegateAndDataSourcesProtocol {
+extension MainListViewController: TableViewDelegateAndDataSourcesProtocol {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0

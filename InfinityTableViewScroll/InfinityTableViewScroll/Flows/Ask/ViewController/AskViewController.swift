@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AskViewController: TableViewController {
+final class AskViewController: MainListViewController {
     
     // MARK: - Properties:
     

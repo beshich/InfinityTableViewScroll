@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class TopViewController: TableViewController {
+final class TopViewController: MainListViewController {
     
     // MARK: - Properties:
     
