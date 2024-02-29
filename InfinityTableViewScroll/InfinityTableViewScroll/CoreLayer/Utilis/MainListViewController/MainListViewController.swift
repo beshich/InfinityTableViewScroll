@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class MainListViewController: UIViewController {
+class MainListViewController: MainViewController {
     
     // MARK: - Properties:
     
@@ -25,42 +25,48 @@ class MainListViewController: UIViewController {
     
     // MARK: UI Elements:
     
-    lazy var tableView = UITableView().apply {
+    lazy var tableView = UITableView(frame: .zero, style: .insetGrouped).apply {
         $0.delegate = self
         $0.dataSource = self
-        $0.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
+        $0.estimatedRowHeight = UITableView.automaticDimension
+        $0.sectionHeaderHeight = UITableView.automaticDimension
+        $0.keyboardDismissMode = .onDrag
+        $0.separatorStyle = .none
+        $0.contentInset = .init(top: 0, left: 0, bottom: 60, right: 0)
     }
     
-    // MARK: - Lifecycle:
-    
-    init(mainListViewModel: MainListViewModel) {
-        self.mainListViewModel = mainListViewModel
-        super.init(nibName: nil, bundle: nil)
+    init(viewModel: MainListViewModel) {
+        self.mainListViewModel = viewModel
+        super.init()
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setupViews()
-    }
-}
-
-// MARK: - Setup Views:
-
-extension MainListViewController {
-    
-    private func setupViews() {
-        view.addSubview(tableView)
-        
         setupConstraints()
+        setupBindings()
+        mainListViewModel.viewDidLoad()
     }
-    
-    private func setupConstraints() {
-        tableView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+
+    func setupViews() {
+        title = mainListViewModel.title
+        view.backgroundColor = .white
+        tableView.backgroundColor = .clear
+        view.addSubview(tableView)
+    }
+
+    func setupConstraints() {
+        tableView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+
+    func setupBindings() {
+        mainListViewModel.didUpdateSections = { [weak self] in
+            guard let self else { return }
+            
+            self.tableView.reloadData()
         }
     }
 }
@@ -70,13 +76,16 @@ extension MainListViewController {
 extension MainListViewController: TableViewDelegateAndDataSourcesProtocol {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return mainListViewModel.sections.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return mainListViewModel.sections.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         reusableCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        reusableCell.textLabel?.numberOfLines = 0
-        reusableCell.textLabel?.lineBreakMode = .byWordWrapping
+        reusableText = mainListViewModel.sections[indexPath.row].title
         
         return reusableCell
     }
@@ -90,6 +99,6 @@ extension MainListViewController: TableViewDelegateAndDataSourcesProtocol {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        return
+        mainListViewModel.didSelectRowAt(indexPath: indexPath)
     }
 }

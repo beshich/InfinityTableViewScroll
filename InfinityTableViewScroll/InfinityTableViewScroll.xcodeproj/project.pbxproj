@@ -32,6 +32,7 @@
 		8E8DA9F329B8ED2B002D549C /* StoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9F229B8ED2B002D549C /* StoryModel.swift */; };
 		8E8DA9F529B8EE06002D549C /* Stories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8DA9F429B8EE06002D549C /* Stories.swift */; };
 		8EB730C22B8FA2A200716BBC /* MainListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB730C12B8FA2A200716BBC /* MainListViewModel.swift */; };
+		8EB730C52B90F2C800716BBC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB730C42B90F2C800716BBC /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		8E8DA9F229B8ED2B002D549C /* StoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryModel.swift; sourceTree = "<group>"; };
 		8E8DA9F429B8EE06002D549C /* Stories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stories.swift; sourceTree = "<group>"; };
 		8EB730C12B8FA2A200716BBC /* MainListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewModel.swift; sourceTree = "<group>"; };
+		8EB730C42B90F2C800716BBC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +121,12 @@
 		8E427B8529A68AB100CA5BE1 /* Utilis */ = {
 			isa = PBXGroup;
 			children = (
-				8E8DA9F129B8ED07002D549C /* Model */,
 				8E8DA9D929B36780002D549C /* Constants */,
+				8E8DA9CD29ADE38B002D549C /* MainListViewController */,
+				8EB730C32B90F2A900716BBC /* MainViewController */,
+				8E8DA9F129B8ED07002D549C /* Model */,
 				8E8DA9D629B36762002D549C /* Network */,
 				8E427B8629A68AB900CA5BE1 /* TabBarController */,
-				8E8DA9CD29ADE38B002D549C /* MainListViewController */,
 			);
 			path = Utilis;
 			sourceTree = "<group>";
@@ -371,6 +374,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		8EB730C32B90F2A900716BBC /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8EB730C42B90F2C800716BBC /* MainViewController.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -448,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E65EB5529A3D70900099A43 /* TopViewController.swift in Sources */,
+				8EB730C52B90F2C800716BBC /* MainViewController.swift in Sources */,
 				8E427B6C29A529D900CA5BE1 /* InlineProtocols.swift in Sources */,
 				8E65EB5329A3D6EC00099A43 /* ShowViewController.swift in Sources */,
 				8E427B6F29A52A5100CA5BE1 /* NSObject + Extensions.swift in Sources */,

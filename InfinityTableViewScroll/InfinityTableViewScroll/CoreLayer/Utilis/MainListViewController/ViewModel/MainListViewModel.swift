@@ -11,11 +11,12 @@ protocol MainListViewModelInputProtocol {
     var stories: Stories { get set }
     var didUpdateSections: VoidCallback? { get set }
     var topStories: [Int] { get set }
-    var displayStories: [StoryModel] { get set }
+    var sections: [StoryModel] { get set }
     var limit: Int { get set }
     var lastItemIndex: Int { get set }
     var isUpdating: Bool { get set }
     var isAllDataDisplayed: Bool { get set }
+    var title: String { get set }
 }
 
 protocol MainListViewModelOutputProtocol {
