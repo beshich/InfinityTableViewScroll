@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MainListViewModelInputProtocol {
-    var stories: Stories { get set }
+    var stories: String { get set }
     var didUpdateSections: VoidCallback? { get set }
     var topStories: [Int] { get set }
     var sections: [StoryModel] { get set }
@@ -22,6 +22,11 @@ protocol MainListViewModelInputProtocol {
 protocol MainListViewModelOutputProtocol {
     func viewDidLoad()
     func didSelectRowAt(indexPath: IndexPath)
+    func didUpdateDisplayData()
+}
+
+extension MainListViewModelOutputProtocol {
+    func didSelectRowAt(indexPath: IndexPath) {}
 }
 
 typealias MainListViewModel = MainListViewModelInputProtocol & MainListViewModelOutputProtocol

@@ -7,20 +7,23 @@
 
 import Foundation
 
-final class JobViewModel {
-    
-    // MARK: - Private Properties:
-    
-    private let stories = Stories.job.serviceName
+final class JobViewModel: MainListViewModel {
     
     // MARK: - Properties:
+    
+    var stories: String = Stories.job.serviceName
+    
+    var didUpdateSections: VoidCallback?
+    
+    var sections: [StoryModel] = []
+    
+    var title: String = ""
     
     var didUpdateSection: Callback<Bool>?
     
     var topStories: [Int] = []
-    var displayStories: [StoryModel] = []
     
-    let limit = 20
+    var limit = 20
     var lastItemIndex = -1
     var isUpdating = false
     var isAllDataDisplayed = false
@@ -38,11 +41,11 @@ final class JobViewModel {
             guard let self else { return }
             
             self.topStories = response
-            self.updateDisplayData()
+            self.didUpdateDisplayData()
         }
     }
     
-    func updateDisplayData() {
+    func didUpdateDisplayData() {
         let firstIndex = lastItemIndex + 1
         
         if firstIndex > topStories.count - 1 {
@@ -59,9 +62,9 @@ final class JobViewModel {
             getStoryById(id: topStories[index]) { [weak self] stories in
                 guard let self else { return }
                 
-                self.displayStories.append(stories)
+                self.sections.append(stories)
                 
-                if self.displayStories.count == maxIndex + 1 {
+                if self.sections.count == maxIndex + 1 {
                     self.isUpdating = true
                     self.didUpdateSection?(true)
                 }

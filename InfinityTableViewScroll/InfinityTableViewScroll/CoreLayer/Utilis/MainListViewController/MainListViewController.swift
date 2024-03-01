@@ -20,8 +20,8 @@ class MainListViewController: MainViewController {
     
     var mainListViewModel: MainListViewModel
     
-    var reusableCell = UITableViewCell()
-    var cellIdentifier = "reusableCell"
+    var reusableCell: UITableViewCell
+    var cellIdentifier: String
     
     // MARK: UI Elements:
     
@@ -35,8 +35,10 @@ class MainListViewController: MainViewController {
         $0.contentInset = .init(top: 0, left: 0, bottom: 60, right: 0)
     }
     
-    init(viewModel: MainListViewModel) {
+    init(viewModel: MainListViewModel, cellIdentifier: String, reusableCell: UITableViewCell) {
         self.mainListViewModel = viewModel
+        self.cellIdentifier = cellIdentifier
+        self.reusableCell = reusableCell
         super.init()
     }
 
@@ -46,6 +48,7 @@ class MainListViewController: MainViewController {
         setupViews()
         setupConstraints()
         setupBindings()
+        updateDisplayData()
         mainListViewModel.viewDidLoad()
     }
 
@@ -66,8 +69,14 @@ class MainListViewController: MainViewController {
         mainListViewModel.didUpdateSections = { [weak self] in
             guard let self else { return }
             
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
+    }
+    
+    func updateDisplayData() {
+        mainListViewModel.didUpdateDisplayData()
     }
 }
 
