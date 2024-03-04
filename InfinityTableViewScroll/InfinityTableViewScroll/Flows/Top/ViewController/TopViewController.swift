@@ -22,7 +22,7 @@ final class TopViewController: MainListViewController {
     
     init(viewModel: TopViewModel) {
         self.viewModel = viewModel
-        super.init(viewModel: viewModel, cellIdentifier: "Top", reusableCell: UITableViewCell())
+        super.init(viewModel: viewModel)
     }
     
     override func setupBindings() {

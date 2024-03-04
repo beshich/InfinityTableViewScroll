@@ -22,7 +22,7 @@ final class ShowViewController: MainListViewController {
     
     init(viewModel: ShowViewModel) {
         self.viewModel = viewModel
-        super.init(viewModel: viewModel, cellIdentifier: "Show", reusableCell: UITableViewCell())
+        super.init(viewModel: viewModel)
     }
     
     override func setupBindings() {

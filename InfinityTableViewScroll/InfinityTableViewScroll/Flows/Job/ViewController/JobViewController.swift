@@ -22,7 +22,7 @@ final class JobViewController: MainListViewController {
     
     init(viewModel: JobViewModel) {
         self.viewModel = viewModel
-        super.init(viewModel: viewModel, cellIdentifier: "Job", reusableCell: UITableViewCell())
+        super.init(viewModel: viewModel)
     }
     
     override func setupBindings() {

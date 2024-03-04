@@ -22,7 +22,7 @@ final class AskViewController: MainListViewController {
     
     init(viewModel: AskViewModel) {
         self.viewModel = viewModel
-        super.init(viewModel: viewModel, cellIdentifier: "Ask", reusableCell: UITableViewCell())
+        super.init(viewModel: viewModel)
     }
     
     override func setupBindings() {

@@ -12,16 +12,7 @@ class MainListViewController: MainViewController {
     
     // MARK: - Properties:
     
-    var reusableText: String? {
-        didSet {
-            reusableCell.textLabel?.text = reusableText
-        }
-    }
-    
     var mainListViewModel: MainListViewModel
-    
-    var reusableCell: UITableViewCell
-    var cellIdentifier: String
     
     // MARK: UI Elements:
     
@@ -35,10 +26,8 @@ class MainListViewController: MainViewController {
         $0.contentInset = .init(top: 0, left: 0, bottom: 60, right: 0)
     }
     
-    init(viewModel: MainListViewModel, cellIdentifier: String, reusableCell: UITableViewCell) {
+    init(viewModel: MainListViewModel) {
         self.mainListViewModel = viewModel
-        self.cellIdentifier = cellIdentifier
-        self.reusableCell = reusableCell
         super.init()
     }
 
@@ -93,10 +82,12 @@ extension MainListViewController: TableViewDelegateAndDataSourcesProtocol {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        reusableCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        reusableText = mainListViewModel.sections[indexPath.row].title
+        let item = mainListViewModel.sections[indexPath.row]
+        tableView.registerCell(UITableViewCell.self)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        cell.textLabel?.text = item.title
         
-        return reusableCell
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
